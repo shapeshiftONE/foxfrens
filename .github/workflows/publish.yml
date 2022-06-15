@@ -13,7 +13,7 @@ jobs:
       - name: build
         run: |
           echo "${{ secrets.PAT }}" | docker login ghcr.io -u "${{ secrets.GHCR_USER }}" --password-stdin
-          docker build -f Dockerfile.production . --tag ghcr.io/${{ secrets.GHCR_REPO }}:${GITHUB_REF#refs/tags/}
-          docker tag ghcr.io/${{ secrets.GHCR_REPO }}:${GITHUB_REF#refs/tags/} ghcr.io/${{ secrets.GHCR_REPO }}:latest
-          docker push ghcr.io/${{ secrets.GHCR_REPO }}:${GITHUB_REF#refs/tags/}
-          docker push ghcr.io/${{ secrets.GHCR_REPO }}:latest
+          docker build -f Dockerfile.production . --tag ghcr.io/shapeshiftone/foxfrens:${GITHUB_REF#refs/tags/}
+          docker tag ghcr.io/shapeshiftone/foxfrens:${GITHUB_REF#refs/tags/} ghcr.io/shapeshiftone/foxfrens:latest
+          docker push ghcr.io/shapeshiftone/foxfrens:${GITHUB_REF#refs/tags/}
+          docker push ghcr.io/shapeshiftone/foxfrens:latest
