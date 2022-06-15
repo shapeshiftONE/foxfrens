@@ -116,27 +116,12 @@
     "gasPricePrefer": "0.1uixo"
   },
   {
-    "name": "kichain",
-    "gasPrice": "0.025uxki"
-  },
-  {
-    "name": "sommelier"
-  },
-  {
     "name": "konstellation",
     "image": "https://raw.githubusercontent.com/Konstellation/DARC_token/main/darctoken.svg"
   },
   {
     "name": "fetchhub",
     "gasPrice": "5000afet"
-  },
-  {
-    "name": "cerberus",
-    "gasPrice": "0.025ucrbrus",
-    "autostake": {
-      "batchTxs": 100
-    },
-    "ownerAddress": "cerberusvaloper1tat2cy3f9djtq9z7ly262sqngcarvaktr0w78f"
   },
   {
     "name": "secretnetwork",
