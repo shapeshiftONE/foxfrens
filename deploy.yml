@@ -7,8 +7,8 @@ services:
     expose:
       - port: 80
         accept:
-          - restake.ecostake.com
-          - restake.app
+          - foxfrens.com
+          - ibc.foxfrens.com
         to:
           - global: true
 
@@ -38,4 +38,4 @@ deployment:
   node:
     dcloud:
       profile: node
-      count: 3
+      count: 2
