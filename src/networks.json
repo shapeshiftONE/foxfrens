@@ -142,49 +142,5 @@
     "name": "secretnetwork",
     "gasPrice": "0.025uscrt",
     "gasPricePrefer": "0.05uscrt"
-  },
-  {
-    "name": "bostrom",
-    "gasPrice": "0boot"
-  },
-  {
-    "name": "starname",
-    "gasPrice": "10uvoi"
-  },
-  {
-    "name": "rizon",
-    "gasPrice": "0.0001uatolo"
-  },
-  {
-    "name": "decentr",
-    "gasPrice": "0.025udec"
-  },
-  {
-    "name": "assetmantle",
-    "gasPrice": "0.025umntl",
-    "gasPriceStep": {
-      "low": 0,
-      "average": 0.025,
-      "high": 0.04
-    },
-    "ownerAddress": "mantlevaloper1fqs7gakxdmujtk0qufdzth5pfyspus3yx394zd"
-  },
-  {
-    "name": "crescent",
-    "gasPrice": "0.025ucre",
-    "gasPriceStep": {
-      "low": 0,
-      "average": 0.025,
-      "high": 0.04
-    },
-    "apyEnabled": false
-  },
-  {
-    "name": "meme",
-    "gasPrice": "0.025umeme"
-  },
-  {
-    "name": "cronos",
-    "enabled": false
   }
 ]
