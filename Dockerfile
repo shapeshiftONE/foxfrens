@@ -1,5 +1,5 @@
 # build env
-FROM node:17-alpine as build
+FROM node:17-bullseye as build
 
 WORKDIR /app
 COPY package*.json ./
@@ -13,7 +13,7 @@ ENV DIRECTORY_DOMAIN=cosmos.directory
 RUN npm run build
 
 # production env
-FROM nginx:stable-alpine
+FROM nginx:stable-bullseye
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
