@@ -1,17 +1,20 @@
-# dev env
-FROM node:17-alpine
+# build env
+FROM node:17-alpine as build
 
-RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
-
-ENV NODE_ENV=development
-
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 COPY . ./
 
+ARG BUGSNAG_KEY
+ENV BUGSNAG_KEY=${BUGSNAG_KEY}
 ENV DIRECTORY_PROTOCOL=https
 ENV DIRECTORY_DOMAIN=cosmos.directory
+RUN npm run build
 
-EXPOSE 3000
-CMD npm run start
+# production env
+FROM nginx:stable-alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
